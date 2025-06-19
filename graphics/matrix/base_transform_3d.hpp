@@ -17,7 +17,7 @@ namespace graphics
 
     public:
         BaseTransform3D() = default;
-        BaseTransform3D(const glm::vec3 &position, const glm::vec3 &scale)
+        BaseTransform3D(const glm::vec3 &position, const glm::vec3 &scale = glm::vec3(1.0f))
             : m_position(position), m_scale(scale) {}
         ~BaseTransform3D() override = default;
 

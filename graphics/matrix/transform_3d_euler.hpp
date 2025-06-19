@@ -31,7 +31,7 @@ namespace graphics
 
     public:
         Transform3DEuler() = default;
-        Transform3DEuler(const glm::vec3 &position, const glm::vec3 &rotation, const glm::vec3 &scale)
+        Transform3DEuler(const glm::vec3 &position, const glm::vec3 &rotation=glm::vec3(0.0f), const glm::vec3 &scale = glm::vec3(1.0f))
             : BaseTransform3D(position, scale), m_rotation(rotation) { _update_matrix(); }
         ~Transform3DEuler() override = default;
 
