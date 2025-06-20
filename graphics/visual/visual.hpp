@@ -24,6 +24,10 @@ namespace graphics
         bool is_visible() const { return m_is_visible; }
 
     protected:
+        /// @brief 直接设置可见性
+        /// @param is_visible 是否可见
+        void _set_visibility(bool is_visible) { m_is_visible = is_visible; }
+
         /// @brief 渲染
         virtual void _render() = 0;
 

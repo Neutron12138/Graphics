@@ -14,3 +14,7 @@
 
 #include "mesh/vertex_2d.hpp"
 #include "mesh/vertex_3d.hpp"
+#include "mesh/vertex_attribute.hpp"
+#include "mesh/base_mesh.hpp"
+#include "mesh/mesh_2d.hpp"
+#include "mesh/mesh_3d.hpp"

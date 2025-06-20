@@ -19,7 +19,7 @@ namespace graphics
 
     public:
         Transform2D() = default;
-        Transform2D(const glm::vec2 &position, float rotation, const glm::vec2 &scale)
+        Transform2D(const glm::vec2 &position, float rotation = 0.0f, const glm::vec2 &scale = glm::vec2(1.0f))
             : m_position(position), m_rotation(rotation), m_scale(scale) { _update_matrix(); }
         ~Transform2D() override = default;
 

@@ -25,7 +25,7 @@ namespace graphics
 
     public:
         Projection3D() = default;
-        Projection3D(float fov, float aspect, float z_near, float z_far)
+        Projection3D(float fov, float aspect, float z_near = 0.1f, float z_far = 100.0f)
             : BaseProjection3D(z_near, z_far), m_fov(fov), m_aspect(aspect) { _update_matrix(); }
         ~Projection3D() override = default;
 

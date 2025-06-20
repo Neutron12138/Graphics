@@ -6,19 +6,21 @@
 namespace graphics
 {
     /// @brief 2D顶点
-    class Vertex2D : public base::CompactObject
+    class Vertex2D
     {
     public:
         /// @brief 位置
-        glm::vec2 position = glm::vec2(0.0f);
+        glm::vec2 position;
         /// @brief 纹理坐标
-        glm::vec2 tex_coord = glm::vec2(0.0f);
+        glm::vec2 tex_coord;
 
     public:
         Vertex2D() = default;
-        Vertex2D(const glm::vec2 &pos, const glm::vec2 &uv)
-            : position(pos), tex_coord(uv) {}
+        constexpr Vertex2D(const glm::vec2 &pos, const glm::vec2 &tc = {})
+            : position(pos), tex_coord(tc) {}
         ~Vertex2D() = default;
     };
+
+    using Vertex2DArray = std::vector<Vertex2D>;
 
 } // namespace graphics
