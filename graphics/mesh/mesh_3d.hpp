@@ -33,7 +33,7 @@ namespace graphics
 
     public:
         base::Int64 get_resource_type() const override { return static_cast<base::Int64>(ResourceType::Mesh3D); }
-        base::Size get_raw_vertices_size() const override { return m_vertices.size() * sizeof(float); }
+        base::Size get_raw_vertices_size() const override { return m_vertices.size() * sizeof(Vertex3D); }
         const void *get_raw_vertices() const override { return m_vertices.data(); }
         base::Size get_vertex_size() const override { return sizeof(Vertex3D); }
 

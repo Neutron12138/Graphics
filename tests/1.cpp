@@ -14,8 +14,8 @@ int main()
 
     constexpr graphics::VertexAttribute va(graphics::VertexAttribute::DataType::Float, 3, 0);
     std::cout << std::is_trivial_v<graphics::VertexAttribute> << std::endl
-              << (va.get_data_size() == sizeof(GLfloat)) << std::endl
-              << (va.get_total_size() == 3 * sizeof(GLfloat)) << std::endl
+              << (va.get_data_size() == sizeof(float)) << std::endl
+              << (va.get_total_size() == 3 * sizeof(float)) << std::endl
               << (va.get_offset_pointer() == nullptr) << std::endl
               << std::endl;
 

@@ -1,6 +1,5 @@
 #pragma once
 
-#include <GL/glew.h>
 #include <glm/glm.hpp>
 #include <base/base.hpp>
 
@@ -11,16 +10,16 @@ namespace graphics
     {
     public:
         /// @brief 数据类型
-        enum class DataType : GLenum
+        enum class DataType : base::Int32
         {
             /// @brief 无
             None,
             /// @brief 浮点数
-            Float = GL_FLOAT,
+            Float,
             /// @brief 整数
-            Int = GL_INT,
+            Int,
             /// @brief 无符号整数
-            UnsignedInt = GL_UNSIGNED_INT,
+            UnsignedInt,
         };
 
     public:
@@ -45,18 +44,16 @@ namespace graphics
             switch (data_type)
             {
             case DataType::Float:
-                return sizeof(GLfloat);
+                return sizeof(float);
 
             case DataType::Int:
-                return sizeof(GLint);
+                return sizeof(int);
 
             case DataType::UnsignedInt:
-                return sizeof(GLuint);
+                return sizeof(unsigned int);
 
             default:
-                throw std::runtime_error(base::to_string(
-                    "Invalid data type: ",
-                    static_cast<GLenum>(data_type)));
+                return 0;
             }
         }
 
